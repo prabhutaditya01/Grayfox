@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+{{>header}}
+<style>
+    section{
+        background-color: whitesmoke;
+    }
+</style>
+
+<body>
+    {{>navbar}}
+    {{>navbar2}}
+    <section>
+        <div id="disclaimer">
+            <ul>
+           <li> <span>Disclaimer:</span> Digital Health Intelligence Limited operates the digitalhealth.net website and the Digital Health news service. The site hosts user-generated content, including comments from readers on news stories, features and other items.</li>
+
+<li>We host comments because we want to provide readers with an opportunity to discuss our content and to debate and share issues of professional and public interest.</li>
+
+<li>However, we want to make sure that this happens in a safe and inclusive fashion, so these opportunities are available to as many people as possible.</li>
+
+<li>We also need to stay within the law and we need you to be aware of some of the legal risks to us – and to you – that can occur when the site is misused.</li>
+        </ul>
+        </div>
+    </section>
+    <section>
+        <div id="comment_section">
+        <form id="form">
+            <label>
+            Write a Comment</label>
+            <div>
+            <textarea id="area" rows="4" value="express here..."></textarea></div>
+           <div> <button id="comment_button">Post Comment</button></div>
+        </form>
+        </div>
+    </section>
+<section id="prev">
+     <div id="prev_comments">
+        <div class="typing"></div>
+        <ul id="comment_box">
+       </ul>
+
+     </div>
+</section>
+
+</body>
+<script src="/socket.io/socket.io.js"></script>
+<script src="app2.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.25.3/moment.min.js"></script>
+</html>

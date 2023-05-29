@@ -1,0 +1,520 @@
+* {
+    margin:0%;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+    
+    }
+    #upper{
+        display:grid;
+        grid-auto-columns: auto;
+        padding:10px;
+        background-color: white;
+        width: 100%;  
+        position: fixed;
+        top: 0%;
+    }
+    #logo_img{
+        grid-area: 1/1;
+        height:49px;
+        width:130px;
+        padding:10px;
+    }
+    #nav{
+    grid-area: 1/2;
+    text-align: right;
+   
+   
+    }
+    #list{
+        list-style: none;
+        display:grid;
+        grid-auto-columns: auto;
+    }
+    #li1,#li2,#li3,#li4,#li5,#li6{
+        padding: 15px;
+    }
+    #li1{
+        grid-area:1/1;
+    }
+    #li2{
+        grid-area:1/2;
+    }
+    #li3{
+        grid-area:1/3;
+    }
+    #li4{
+        grid-area:1/4;
+    }
+    #li5{
+        grid-area:1/5;
+    }
+    #li6{
+        grid-area:1/6;
+        padding-right:30px;
+    }
+    #list li a{
+        text-decoration: none;
+        color: black;
+    }
+   
+   
+    
+   
+        #qoute{
+            height:70px;
+            width:100%;
+            background-color:rgb(21, 106, 8);
+            color:white;
+            font-weight: bolder;
+            
+    
+        }
+        #qoute p{
+            font-family: cursive;
+            font-size: 30px;
+            padding-top: 10px;
+            margin-left: 10%;
+        }
+        #sustain{
+            margin-top:10px;
+            display:grid;
+            grid-auto-columns: 50%;
+            
+        }
+       #head1{
+        margin:20px;   
+        margin-bottom: 10px;
+        text-shadow: 5px 5px 5px #0d0d0d56;
+        text-align: center;
+    
+        }
+        #sus_photo{
+        margin:20px;
+        margin-left: 100px;
+        margin-bottom: 30px;
+        height:400px;
+        width: 45%;
+        grid-area: 1 / 1 ;
+        box-shadow: 5px 10px 8px #0d0d0d88;
+        overflow: hidden;
+        }
+        #sus_photo:hover{
+          height:400px;
+          transform: scale(1.1);
+          transition:all 500ms linear;
+          box-shadow: 5px 10px 8px #111111a7;
+        }
+        #content1{
+            padding:40px;
+            grid-area: 1 / 2 ;
+            font-size: 18.8px;
+            margin-right: 100px;
+    
+        }
+        #content1 a{
+            text-decoration: none;
+            color: rgb(12, 86, 223);
+        }
+        #rs{
+            width: 100%;
+            background-color: rgba(201, 198, 198, 0.43);
+            padding: 50px;
+        }   
+        #rs h2{
+            font-size: 30px;
+            padding-bottom: 15px;
+            margin-left:43%;
+            color: green;
+            text-shadow: 5px 5px 5px #0d0d0d56;
+    
+        }
+        .rs_photo{
+             height: 150px;
+    
+            
+        }
+        #f1{
+           margin-left: 20%;
+        }
+        #sectors{
+            margin-top: 30px;
+            text-align: center;
+        }
+        .heading{
+            text-align: center;
+            margin-bottom: 20px;
+            color:rgb(74, 161, 196);
+            text-shadow: 5px 5px 5px #0d0d0d56;
+    
+        }
+        #sector2{
+            display: grid;
+            grid-auto-columns:auto;
+        }
+        .card1{
+            grid-area: 1/1;
+        }
+        .card2{
+            grid-area: 1/2;
+        }
+        .card3{
+            grid-area: 1/3;
+        }
+        .card4{
+            grid-area: 1/4;
+        }
+        .card1 , .card2, .card3 ,.card4{
+            display: inline-block;
+            margin:20px;
+            color:rgb(74, 161, 196);
+            font-weight: bolder;
+            font-size: 20px;
+        }
+        .card_photo{
+            width:95%;
+            height:300px;
+            margin-bottom: 5px;
+            box-shadow: 5px 5px 5px #111111a7 ;
+            object-fit: cover;
+        }
+        #btn1{
+            display: inline-block;
+            margin:30px;
+        }
+        #sectors div a button{
+            padding:20px;
+            background:rgb(74, 161, 196);
+            border-style: none;
+            cursor: pointer;
+            color:White;
+            font-size:17px ;
+}
+        #sectors div a{
+            text-decoration: none;
+        }
+        #services{
+            margin-top: 30px;
+            text-align: center;
+        }
+        
+        #services2{
+            display: grid;
+            grid-auto-columns:auto;
+        }
+        #btn2{
+            display: inline-block;
+            margin:30px;
+            text-align: center;
+        }
+        #services div a button{
+            padding:20px;
+            background:rgb(74, 161, 196);
+            border-style: none;
+            cursor: pointer;
+            color:White;
+            font-size:17px ;
+}
+        #services div a{
+            text-decoration: none;
+        }
+        #ini{
+            margin-top: 60px;
+            background-color: rgba(0, 128, 0, 0.514);
+            padding: 50px;
+        }
+        .ini2{
+            padding: 50px;
+            height:400px;
+            width:90%;
+            margin: auto;
+            display: grid;
+            grid-auto-columns: 50%;
+            color:white;
+            border-style: solid;
+            border-color: white;
+        }
+        #content2{
+            grid-area: 1/1;
+            margin: auto;
+            height:90%;
+            width:100%;
+            border-color: white;
+            border-style: solid;
+            overflow-y: auto;
+        }
+        #pdf{
+            grid-area:1/2;
+            margin: auto;
+            height:90%;
+            width: 85%;
+            border-style: solid;
+            border-color: white;
+        }
+        #icon1{
+            margin-left:40%;
+            margin-top:20px;
+        }
+        .icon{
+            height:85px;
+            width:85px;
+            border-radius: 150px;
+        }
+        #item{
+            margin:30px;
+            margin-top: 20px;
+            text-align: center;
+            padding:5px;
+        }
+       
+       
+
+
+        
+
+
+
+
+
+
+
+#sec_img{
+    margin-top: 90px;
+    height: 350px;
+    width:100%;
+    background:url("https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Sysav%E2%80%93flygbild_06_september_2014.jpg/330px-Sysav%E2%80%93flygbild_06_september_2014.jpg");
+    background-size: 100% 100%;
+}
+#sec_image{
+    margin-top: 90px;
+    height: 350px;
+    width:100%;
+    background:url("https://www.aces.edu/wp-content/uploads/2020/01/shutterstock_1317121700-scaled.jpg");
+    background-size: 100% 100%;
+}
+
+
+#overlap{
+    font-size: 25px;
+    margin:px;
+    padding:50px;
+    background-color: rgba(0, 0, 0, 0.559);
+    color: rgb(201, 201, 201);
+    display: inline-block;
+}
+#parent{
+    margin-top:100px;
+    text-align:center;
+}
+#content_div,#content_div2,#content_div3,#content_div4{
+    padding:20px;
+    margin:15px;
+    margin-left: 0%;
+    text-align: justify;
+    display:none;
+}
+.bton{
+     text-decoration: none;
+     padding:20px;
+     background-color:rgb(74, 161, 196);
+     display:inline-block;
+     margin:20px;
+     margin-left: 0%;
+     color: white;
+     border-style: none;
+     cursor:pointer;
+}
+
+
+
+
+
+
+
+
+#impact_heading{
+     font-weight: bolder;
+     font-size: 50px;
+     color: rgb(74, 161, 196);
+     margin-top:89px;
+     text-align: center;
+}
+#impact_content{
+    margin:50px;
+    text-align: center;
+
+}
+#graph1{
+    margin-top:50px;
+    text-align: center;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+#disclaimer{
+   margin: auto;
+   margin-top:91px;
+    font-weight: bolder;
+    color:rgb(74, 161, 196) ;
+}
+#comment_section{
+    margin:50px;
+    margin-top:50px;
+    
+    
+}
+#area{
+    width:80%;
+    padding:10px;
+   
+}
+#comment_button{
+    text-decoration: none;
+    padding:10px;
+    background-color:rgb(74, 161, 196) ;
+    color:white;
+    border-style: none;
+    margin-top: 10px;
+    cursor:pointer;
+}
+#prev{
+    margin-top:50px;
+}
+#comment_content,#username,#time{
+    margin:10px;
+}
+.comment{
+    margin:10px;
+    margin-top:50px;
+    padding:10px;
+    width:100%;
+}
+.typing{
+    color: green;
+    font-size: smaller;
+}
+
+
+
+
+
+
+
+#nav2{
+    position: fixed;
+    top:0%;
+    width:100%;
+    padding:20px;
+    display:none;
+    background-color: white;
+}
+#grid_div{
+    display: grid;
+    grid-auto-columns: 50%;
+}
+#nav2_img{
+    height:32px;
+    grid-area: 1/1;
+}
+#nav_icon{
+    grid-area:1/2;
+    position: relative;
+    right:-55%;
+    margin-right:15px;
+}
+#nav_lists{
+    padding-top:15px;
+    display:none;
+    background-color: white;
+    width:100%;
+}
+#nav_list li{
+    margin:5px;
+}
+#nav_list a{
+text-decoration: none;
+color: black;
+}
+
+@media(max-width:500px){
+    #nav2{
+        display:block;
+    }
+    #upper{
+        display:none;
+    }
+    #qoute{
+        display:none;
+    }
+    #sustain{
+
+        display:block;
+        text-align: center;
+        
+    }
+    #sus_photo{
+        margin:0%;
+        margin-top:30px;
+        height:300px;
+        margin-bottom: 30px;
+        width:80%;
+    }
+   
+    #content1{
+        margin:0%;
+        padding:30px;
+    }
+   
+    #sus_photo:hover{
+          height:300px;
+          
+        }
+
+        #rec_photos,#rs{
+            display:none;
+        }
+        #sector2{
+            display:block;
+        }
+        #services2{
+            display:block;
+        }
+        #parent{
+            text-align: center;
+        }
+        #graph{
+            height:300px;
+            width:100%;
+        }
+        #ini{
+            margin-top: 30px;
+            padding:4px;
+            width:100%;
+        }
+        .ini2{
+            height:auto;
+            padding:0%;
+            display:block;
+            
+        }
+        #pdf{
+            height:400px;
+            width: 100%;
+        
+        }
+        #content2{
+            height:400px;
+        }
+    }       
+        
+        
+

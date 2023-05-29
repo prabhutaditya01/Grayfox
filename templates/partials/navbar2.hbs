@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+{{>header}}
+<style>
+   
+</style>
+<body>
+   <header>
+    <div id="nav2">
+        <div id="grid_div">
+            <img src="6133752182b156000425b3be.png" id="nav2_img"/>
+            <img src="hamburger.png" id="nav_icon"/>
+        </div>
+        <div id="nav_lists">
+            <ul id="nav_list">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/sector">Sectors</a></li>
+                        <li><a href="/services">Services</a></li>
+                        <li><a href="/impacts">Impacts</a></li>
+                        <li><a href="/donate">Donate Us</a></li>
+                        <li><a href="/comments">Comments</a></li>
+                     </ul>
+        </div>
+    </div>
+   </header>
+     
+</body>
+<script>
+    let ham=document.getElementById("nav_icon");
+    let lists=document.getElementById("nav_lists");
+
+    ham.addEventListener("click",function(){
+        if(lists.style.display==="none"){
+            lists.style.display="block"
+        }
+        else{
+            lists.style.display="none"
+        }
+    })
+</script>
+</html>
