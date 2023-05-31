@@ -89,6 +89,7 @@
     
         }
         #sus_photo{
+           
         margin:20px;
         margin-left: 100px;
         margin-bottom: 30px;
@@ -98,6 +99,8 @@
         box-shadow: 5px 10px 8px #0d0d0d88;
         overflow: hidden;
         }
+       
+      
         #sus_photo:hover{
           height:400px;
           transform: scale(1.1);
@@ -445,6 +448,22 @@ text-decoration: none;
 color: black;
 }
 
+
+
+#video{
+    margin-top:50px;
+    text-align: center;
+    width: 100%;
+   
+
+}
+#video iframe{
+    
+    border-radius: 20px;
+    width:75%;
+    height:400px;
+}
+
 @media(max-width:500px){
     #nav2{
         display:block;
@@ -513,6 +532,11 @@ color: black;
         }
         #content2{
             height:400px;
+        }
+
+        #video iframe{
+            height:200px;
+            width: 90%;
         }
     }       
         
