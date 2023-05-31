@@ -2,23 +2,83 @@
 <html lang="en">
 {{>header}}
 <style>
+ #payment{
+    text-align: center;
+    margin-top:90px;
+    padding:50px;
+    display:grid;
+    grid-auto-columns:50%;
+    
+ }
+ #razorpay_img{
+    gird-area:1/1;
+ }
+#rzp-button1{
+    padding: 20px;
+    text-decoration: none;
+    background-color: rgb(74, 161, 196);
+    grid-area:1/2;
+    box-shadow: 5px 5px 8px grey;
+    border-style: none;
+    cursor:pointer;
+    font-size: 20px;
+    color:white;
+}
+@media(max-width:400px){
     #payment{
-        margin-top:90px;
-        text-align:center;
-        background-color: rgb(81, 81, 255);
-        height:50px;
-        
+        display:block;
     }
+    #rzp-button1{
+        margin-top:50px;
+    }
+}
 
 </style>
 <body>
     {{>navbar}}
     {{>navbar2}}
-    <div id="payment">
-    <img src="calendar.png"/>
-    <span>Razorpay will be available after the deployement</span>
+    <div id="payment"><div>
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHcAAAB3CAMAAAAO5y+4AAAAsVBMVEX///8zlf8HJlQAHlBcYXosk/8jkP9op/UAJFP///0AAEUAIFH7/f8bjv8AFUwAHE8Aiv/x+P+51/8AAEIAD0k3mP9+t//3+Pji7/9GnPzr9P+Nv/6eyf/L4v/Q5f/V2d8tPmQAAD5bpv/m6e08SmtkbofO3fSs0f/b5vKXxP+ix/fC2vtorf+rzPVxq/LX6P2dpLORl6e9wsodMlyCipt2gZevtsG2zu+Hs+9KV3XJztch9GFGAAAE1UlEQVRoge1aXXeiMBCF2GBBQFERxbYq2LJWWz9a3dX//8M2AVTIQGFPAvvCvLSHes7tzM3MnRuUpCaaaOJfw1rr/wN2bK/+A6o1NYy3+mH7toInTt2o1kiRZTxS60XVgwmBlY3nemFJspjAytitE1UPME2WRJ30qr82RoQqK9P6YKWgh2NY2VjXBapuPUW+Rc+vC3Z1T5bWuSbU50kiWQJby5BUyVhMJktwx3XAMsnSLqpBi9wRxgws3lQ+JNW1zSZLyhxUjeq2QbI0323FuO9ZqCSqHZLjNixxmK5XJb3Ok5KdrKxUOSRfQPPcu8iqDNVayTnJkjK3K6MXTopkmacV0Wu95zEb4Vaz4qjrn5IlYVey4lirnJ690VtJFxUlW82K43q9n5OluOKHZGAXolZAb2qByqd3I1Z71SBD8DCegDK/C4WV3IwBpXjbDdB8wWVeGywqxk+6ZbMPPcFlHrFVJsmS/4Z9ij/Fdq8zSRcU45DHJxa31xcKK7npghpetKkCehXBGthPJqbYH1E1xyzpWPAGqycSw8bmKrDvgHTBQzJRZmNyp/CTLbNom/9yBcB46t5OrMp2kWwL1qLruVWuyc6o0dyCLmqLhVWjLsLKNJpGzg7NyNMPQO+TWFwrPsYxe/58caZHC8wSQ7AGvtAbqd5Uj9jbm63hnvzUgSjYYmFpYsom9rSHLw2hwYH8tu4BesUeK8tWjJg553vQQQgtHDqywbASTO9b73McZXKYm48EtvtAftc9oIGCbX5wTfYYJouQdpKuhy1Fr2CjEM16nSQboqLHAeletQ+GcyUb7OxVi5IluHNK7x/QvYI1MIzTME6W0vsqpaUiLrN4Hzh70B5vsEijXTRm2cWecNid1kWJWJAhKf1m6VX+CKZ3Nh+gVCzo0ykQBcE2n4zFNKz5TR+z3YsnQjfYyznJbBhD2r1bMDQ8gd3rHztdBpV0L9VAUGaRNv/0NWSTRaizJLub0wYrjjANdI5mB6ASeqkGWhOWXmFG4WSaMFlSZpN20XNVm6R/HGShEtwWXa3ABmt8CKF3r5mZqJRe8mcVaKAsQgNny2EOKlk1dlKGBoqg19l3QfPcy9y9kI8EFXTRZZ7RPHfcL6q9QIsMXg109q1WPmqsgawrJXXm1MDDEozFdJh0SI4B7IgL1X8d/pgsKTOiXQTstvLBA3v6kdkwOks6/eGQ5HmrPltkjUWmzEf6SXCjxGW393mjIhED2kUuMApc9J4LuL3Sq0Kbz3VZ1ioi90ov8IE9Hg2cacVlzvGBBk+63yXoHdIN9hkYBS6b/5o/lG8Rai9ccXhe9zqdEvSe9awyc92FXgaFsDG9YHHm8mNlykzttgR8IF+Z58VljnwgtPk8RsEv0UWRD4QrDg+9uxK4oc0fw6tuDthS9Gq0iwLoAzlgnXmxFj12nKwVh4/eYk2IbnHgGwWu1727Et0b2XxQZh6j4CyLy4yG9JMrgMuz4vhfxd3bOktZ9HJ9aeJSootCmy/YBx6LNTD2geA089Crl6A3WnFW0Ady4PqoBL2hDwT0cvnAQ6bDTkekgWLfB5aht0ONQh9oL89lmVNigw3tNnwvZ/B85clH3VZRDKhRcGzMBo8GHs4PhXGmQ9Jts1HPt5xVGLXgNtFEE0000YSg+AtlE1sMeXam9gAAAABJRU5ErkJggg==" id="razorpay_img"/>
+        <h2>Pay Using Razorpay</h2>
+        </div>
+<button id="rzp-button1">Donate</button>
+    
 
     </div>
-    
 </body>
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script>
+    document.getElementById('rzp-button1').onclick = async function(e){
+    e.preventDefault();
+    let response=await fetch("http://localhost:3000/payment",{
+        method:"POST",
+        headers:{
+            "Content-type":"application/json"
+        },
+        body:JSON.stringify({
+            amount:500
+        })
+    })
+   let orderData=await response.json();
+    var options = {
+    "key": "rzp_test_9aY4T4XHynL1Hi", // Enter the Key ID generated from the Dashboard
+    "amount": "500", // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+    "currency": "INR",
+    
+    "order_id":orderData.id, //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
+    "handler": function (response){
+        alert(response.razorpay_payment_id);
+        alert(response.razorpay_order_id);
+        alert(response.razorpay_signature)
+    },
+  
+};
+var rzp1= new Razorpay(options);
+    rzp1.open();
+}
+
+      
+
+</script>
+
 </html>

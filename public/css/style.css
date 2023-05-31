@@ -119,6 +119,7 @@
             color: rgb(12, 86, 223);
         }
         #rs{
+            text-align: center;
             width: 100%;
             background-color: rgba(201, 198, 198, 0.43);
             padding: 50px;
@@ -126,7 +127,6 @@
         #rs h2{
             font-size: 30px;
             padding-bottom: 15px;
-            margin-left:43%;
             color: green;
             text-shadow: 5px 5px 5px #0d0d0d56;
     
@@ -135,9 +135,6 @@
              height: 150px;
     
             
-        }
-        #f1{
-           margin-left: 20%;
         }
         #sectors{
             margin-top: 30px;
@@ -208,6 +205,7 @@
             display: inline-block;
             margin:30px;
             text-align: center;
+            box-shadow: 5px 5px 8px grey;
         }
         #services div a button{
             padding:20px;
@@ -325,6 +323,7 @@
      color: white;
      border-style: none;
      cursor:pointer;
+     box-shadow: 5px 5px 8px grey;
 }
 
 
@@ -368,20 +367,20 @@
 
 
 #disclaimer{
-   margin: auto;
-   margin-top:91px;
-    font-weight: bolder;
-    color:rgb(74, 161, 196) ;
+margin-top:91px;
+font-weight: bolder;
+color:rgb(74, 161, 196) ;
 }
 #comment_section{
-    margin:50px;
+    margin:30px;
     margin-top:50px;
+    width: 100%;
     
     
 }
 #area{
     width:80%;
-    padding:10px;
+    padding: 10px;
    
 }
 #comment_button{
@@ -392,17 +391,18 @@
     border-style: none;
     margin-top: 10px;
     cursor:pointer;
+    box-shadow: 5px 5px 8px grey;
 }
 #prev{
     margin-top:50px;
 }
 #comment_content,#username,#time{
-    margin:10px;
+    margin-top:10px;
 }
 .comment{
     margin:10px;
     margin-top:50px;
-    padding:10px;
+   
     width:100%;
 }
 .typing{
@@ -542,6 +542,7 @@ color: black;
             height:200px;
             width: 90%;
         }
+        
     }       
         
         

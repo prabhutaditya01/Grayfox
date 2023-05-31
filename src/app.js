@@ -2,6 +2,11 @@ const express=require("express");
 const app=express();
 const path=require("path");
 const hbs=require("hbs");
+const Razorpay=require("razorpay");
+const cors=require("cors");
+
+app.use(cors())
+
 //giving env variable
 const dotenv=require("dotenv")
 dotenv.config()
@@ -43,6 +48,25 @@ app.get("/api/comments",(req,res)=>{
         res.send(comments)
     })
 })
+
+//using razorpay api to integrate in the website
+
+app.post("/payment",async(req ,res)=>{
+    let{amount}=req.body;
+    
+    var instance = new Razorpay({ key_id: 'rzp_test_9aY4T4XHynL1Hi', key_secret: '7VVVUcoi3c7vI1lUf2LxvWQf' })
+
+let order = await instance.orders.create({
+  amount: amount*100,
+  currency: "INR",
+  receipt: "receipt#1",
+  
+})
+res.status(201).json({
+    success:true,
+    order,amount
+});
+});
  
 const port=process.env.PORT || 3000;
 
