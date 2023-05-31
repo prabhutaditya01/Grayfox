@@ -351,6 +351,10 @@
     text-align: center;
     
 }
+#graph{
+    
+    width:  75%;
+}
 
 
 
@@ -464,7 +468,7 @@ color: black;
     height:400px;
 }
 
-@media(max-width:500px){
+@media(max-width:700px){
     #nav2{
         display:block;
     }
